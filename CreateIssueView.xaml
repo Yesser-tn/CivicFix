@@ -1,0 +1,43 @@
+﻿<Window x:Class="CivicFix.UI.CreateIssueView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Report an Issue"
+        Height="400"
+        Width="450"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <StackPanel Width="320" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+            <TextBlock Text="Report an Issue"
+                       FontSize="22"
+                       FontWeight="Bold"
+                       Margin="0,0,0,20"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Title"/>
+            <TextBox Text="{Binding Title}"
+                     Height="30"
+                     Margin="0,0,0,10"/>
+            <TextBlock Text="Category"/>
+            <ComboBox ItemsSource="{Binding Categories}"
+          DisplayMemberPath="Name"
+          SelectedValuePath="Id"
+          SelectedValue="{Binding SelectedCategoryId}"
+          Height="30"
+          Margin="0,0,0,10"/>
+
+
+            <TextBlock Text="Description"/>
+            <TextBox Text="{Binding Description}"
+                     Height="80"
+                     AcceptsReturn="True"
+                     Margin="0,0,0,20"/>
+
+            <Button Content="Submit Issue"
+                    Height="35"
+                    Click="Submit_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

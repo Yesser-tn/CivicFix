@@ -14,19 +14,44 @@ namespace CivicFix.UI
             DataContext = _viewModel;
         }
 
-        // 👇 THIS METHOD WAS MISSING
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             _viewModel.Password = PasswordBox.Password;
 
-            if (_viewModel.Login())
-            {
-                MessageBox.Show("Login successful!", "CivicFix");
-            }
-            else
+            var user = _viewModel.Authenticate();
+
+            if (user == null)
             {
                 MessageBox.Show("Invalid credentials", "Error");
+                return;
             }
+
+            Window dashboard = null;
+
+            switch (user.Role.Name)
+            {
+                case "Admin":
+                    dashboard = new AdminDashboard();
+                    break;
+
+                case "Agent":
+                    dashboard = new AgentDashboard();
+                    break;
+
+                case "Citizen":
+                    dashboard = new CitizenDashboard(user);
+                    break;
+            }
+
+            dashboard.Show();
+            this.Close();
         }
+        private void Register_Click(object sender, RoutedEventArgs e)
+        {
+            var registerView = new RegisterView();
+            registerView.ShowDialog();
+        }
+
+
     }
 }
