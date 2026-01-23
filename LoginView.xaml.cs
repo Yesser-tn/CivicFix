@@ -31,7 +31,7 @@ namespace CivicFix.UI
             switch (user.Role.Name)
             {
                 case "Admin":
-                    dashboard = new AdminDashboard();
+                    dashboard = new AdminDashboard(user.Id);        
                     break;
 
                 case "Agent":

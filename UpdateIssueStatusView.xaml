@@ -1,0 +1,29 @@
+﻿<Window x:Class="CivicFix.UI.UpdateIssueStatusView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Update Issue"
+        Height="350"
+        Width="400"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="20">
+        <StackPanel>
+
+            <TextBlock Text="Status" FontWeight="Bold"/>
+            <ComboBox ItemsSource="{Binding AvailableStatuses}"
+                      SelectedItem="{Binding Status}"
+                      Margin="0,5,0,15"/>
+
+            <TextBlock Text="Resolution Note" FontWeight="Bold"/>
+            <TextBox Text="{Binding ResolutionNote}"
+                     Height="100"
+                     AcceptsReturn="True"
+                     Margin="0,5,0,20"/>
+
+            <Button Content="Save"
+                    Height="35"
+                    Click="Save_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

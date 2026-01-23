@@ -3,11 +3,27 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Admin Dashboard"
         Height="400"
-        Width="600">
+        Width="600"
+        WindowStartupLocation="CenterScreen">
+
     <Grid>
-        <TextBlock Text="Admin Dashboard"
-                   FontSize="24"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="250">
+
+            <TextBlock Text="Admin Dashboard"
+                       FontSize="22"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,30"/>
+
+            <Button Content="Validate Issues"
+                    Height="40"
+                    Margin="0,0,0,15"
+                    Click="ValidateIssues_Click"/>
+
+            <Button Content="View Audit Logs"
+                    Height="40"
+                    Click="ViewLogs_Click"/>
+
+        </StackPanel>
     </Grid>
 </Window>

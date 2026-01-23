@@ -1,27 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CivicFix.ViewModel.Issues;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace CivicFix.UI
 {
-    /// <summary>
-    /// Interaction logic for AgentDashboard.xaml
-    /// </summary>
     public partial class AgentDashboard : Window
     {
         public AgentDashboard()
         {
             InitializeComponent();
+            DataContext = new AgentIssuesViewModel();
+        }
+
+        private void Issue_DoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (((DataGrid)sender).SelectedItem is IssueRow row)
+            {
+                var view = new UpdateIssueStatusView(row.Id);
+                view.ShowDialog();
+            }
         }
     }
 }
+    

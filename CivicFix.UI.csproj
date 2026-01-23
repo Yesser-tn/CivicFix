@@ -66,20 +66,50 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdminIssuesView.xaml.cs">
+      <DependentUpon>AdminIssuesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AgentIssuesView.xaml.cs">
+      <DependentUpon>AgentIssuesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AuditLogsView.xaml.cs">
+      <DependentUpon>AuditLogsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CitizenIssuesView.xaml.cs">
       <DependentUpon>CitizenIssuesView.xaml</DependentUpon>
     </Compile>
     <Compile Include="CreateIssueView.xaml.cs">
       <DependentUpon>CreateIssueView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IssueDetailsView.xaml.cs">
+      <DependentUpon>IssueDetailsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegisterView.xaml.cs">
       <DependentUpon>RegisterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateIssueStatusView.xaml.cs">
+      <DependentUpon>UpdateIssueStatusView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateIssueView.xaml.cs">
+      <DependentUpon>ValidateIssueView.xaml</DependentUpon>
     </Compile>
     <Page Include="AdminDashboard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AdminIssuesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AgentDashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AgentIssuesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AuditLogsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -92,6 +122,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CreateIssueView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IssueDetailsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -127,6 +161,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UpdateIssueStatusView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ValidateIssueView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -159,6 +201,10 @@
     <ProjectReference Include="..\CivicFix.Core\CivicFix.Core.csproj">
       <Project>{CB44C523-EB74-4B66-AB72-EAB8ACEDF312}</Project>
       <Name>CivicFix.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CivicFix.Data\CivicFix.Data.csproj">
+      <Project>{DEEDC888-9735-468D-86F0-91E82EF9D704}</Project>
+      <Name>CivicFix.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\CivicFix.ViewModel\CivicFix.ViewModel.csproj">
       <Project>{90abc208-868a-42e3-9e37-06a6715261c5}</Project>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="CivicFix.UI.AuditLogsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Audit Logs"
+        Height="450"
+        Width="850"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="10">
+        <DataGrid ItemsSource="{Binding Logs}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Admin" Binding="{Binding Admin}" Width="200"/>
+                <DataGridTextColumn Header="Action" Binding="{Binding Action}" Width="120"/>
+                <DataGridTextColumn Header="Entity" Binding="{Binding EntityType}" Width="120"/>
+                <DataGridTextColumn Header="Entity Id" Binding="{Binding EntityId}" Width="100"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+    </Grid>
+</Window>

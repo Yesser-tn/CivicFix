@@ -1,0 +1,23 @@
+﻿<Window x:Class="CivicFix.UI.ValidateIssueView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Validate Issue"
+        Height="220"
+        Width="300"
+        WindowStartupLocation="CenterScreen">
+
+    <StackPanel Margin="20">
+
+        <TextBlock Text="Validation Action" FontWeight="Bold"/>
+
+        <ComboBox x:Name="ActionBox" Margin="0,10,0,20">
+            <ComboBoxItem Content="Validated"/>
+            <ComboBoxItem Content="Rejected"/>
+        </ComboBox>
+
+        <Button Content="Confirm"
+                Height="35"
+                Click="Confirm_Click"/>
+
+    </StackPanel>
+</Window>
