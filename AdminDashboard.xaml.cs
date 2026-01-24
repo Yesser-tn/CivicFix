@@ -14,9 +14,10 @@ namespace CivicFix.UI
 
         private void ValidateIssues_Click(object sender, RoutedEventArgs e)
         {
-            var view = new AdminIssuesView(_adminId);
+            var view = new AdminIssuesView();
             view.ShowDialog();
         }
+
 
         private void ViewLogs_Click(object sender, RoutedEventArgs e)
         {
@@ -24,5 +25,9 @@ namespace CivicFix.UI
             view.ShowDialog();
         }
 
+        private void ViewStatistics_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Statistics module coming soon 👷‍♂️");
+        }
     }
 }

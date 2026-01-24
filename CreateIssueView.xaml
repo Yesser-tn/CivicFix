@@ -25,7 +25,7 @@
           SelectedValuePath="Id"
           SelectedValue="{Binding SelectedCategoryId}"
           Height="30"
-          Margin="0,0,0,10"/>
+          Margin="0,0,0,10" SelectionChanged="ComboBox_SelectionChanged"/>
 
 
             <TextBlock Text="Description"/>

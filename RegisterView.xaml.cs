@@ -20,13 +20,14 @@ namespace CivicFix.UI
 
             if (_viewModel.Register())
             {
-                MessageBox.Show("Registration successful! You can now log in.");
+                MessageBox.Show("Account created successfully.");
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Email already exists.", "Error");
+                MessageBox.Show(_viewModel.ErrorMessage, "Error");
             }
         }
+
     }
 }

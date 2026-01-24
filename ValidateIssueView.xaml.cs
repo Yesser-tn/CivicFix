@@ -30,10 +30,7 @@ namespace CivicFix.UI
 
                 context.AuditLogs.Add(new AuditLog
                 {
-                    AdminId = _adminId,
                     Action = action,
-                    EntityType = "Issue",
-                    EntityId = _issueId,
                     CreatedAt = DateTime.Now
                 });
 

@@ -1,26 +1,29 @@
 ﻿using CivicFix.ViewModel.Issues;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace CivicFix.UI
 {
     public partial class AgentIssuesView : Window
     {
-        public AgentIssuesView()
+        private readonly int _agentId;
+
+        public AgentIssuesView(int agentId)
         {
             InitializeComponent();
-            DataContext = new AgentIssuesViewModel();
+            _agentId = agentId;
+            DataContext = new AgentIssuesViewModel(_agentId);
         }
 
-        private void Issues_DoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void Issues_DoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if (((System.Windows.Controls.DataGrid)sender).SelectedItem is IssueRow issue)
+            if (sender is DataGrid grid && grid.SelectedItem is IssueRow issue)
             {
                 var view = new UpdateIssueStatusView(issue.Id);
                 view.ShowDialog();
 
-                // 🔥 FORCE reload from database
-                DataContext = null;
-                DataContext = new AgentIssuesViewModel();
+                DataContext = new AgentIssuesViewModel(_agentId);
             }
         }
     }
