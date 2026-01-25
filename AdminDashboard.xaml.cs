@@ -29,5 +29,17 @@ namespace CivicFix.UI
         {
             MessageBox.Show("Statistics module coming soon 👷‍♂️");
         }
+        private void CitizenActivity_Click(object sender, RoutedEventArgs e)
+        {
+            var view = new AdminCitizenIssuesView();
+            view.ShowDialog();
+        }
+        private void AgentAvailability_Click(object sender, RoutedEventArgs e)
+        {
+            var view = new AdminAgentAvailabilityView();
+            view.ShowDialog();
+        }
+
+
     }
 }

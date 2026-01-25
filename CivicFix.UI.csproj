@@ -66,6 +66,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdminAgentAvailabilityView.xaml.cs">
+      <DependentUpon>AdminAgentAvailabilityView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCitizenIssuesView.xaml.cs">
+      <DependentUpon>AdminCitizenIssuesView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdminIssuesView.xaml.cs">
       <DependentUpon>AdminIssuesView.xaml</DependentUpon>
     </Compile>
@@ -93,6 +99,14 @@
     <Compile Include="ValidateIssueView.xaml.cs">
       <DependentUpon>ValidateIssueView.xaml</DependentUpon>
     </Compile>
+    <Page Include="AdminAgentAvailabilityView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminCitizenIssuesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AdminDashboard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

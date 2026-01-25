@@ -23,6 +23,12 @@
             <Button Content="View Audit Logs"
                     Height="40"
                     Click="ViewLogs_Click"/>
+            <Button Content="Citizen Activity"
+                    Height="40"
+                    Click="CitizenActivity_Click"/>
+            <Button Content="Agent Availability"
+                    Height="40"
+                    Click="AgentAvailability_Click"/>
 
         </StackPanel>
     </Grid>
