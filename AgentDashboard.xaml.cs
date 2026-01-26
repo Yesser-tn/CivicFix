@@ -12,9 +12,9 @@ namespace CivicFix.UI
         public AgentDashboard(int agentId)
         {
             InitializeComponent();
-            _agentId = agentId;
-            DataContext = new AgentIssuesViewModel(_agentId);
+            DataContext = new AgentIssuesViewModel(agentId);
         }
+
 
         private void Issue_DoubleClick(object sender, MouseButtonEventArgs e)
         {

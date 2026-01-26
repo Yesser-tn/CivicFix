@@ -6,11 +6,39 @@
         Width="800"
         WindowStartupLocation="CenterScreen">
 
+
     <Grid Margin="10">
-        <DataGrid ItemsSource="{Binding Issues}"
-                  AutoGenerateColumns="False"
-                  IsReadOnly="True"
-                  MouseDoubleClick="Issue_DoubleClick">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Active Issues: "
+                   FontSize="16"
+                   FontWeight="SemiBold"/>
+            <TextBlock Text="{Binding ActiveIssuesCount}"
+                   FontSize="16"
+                   FontWeight="Bold"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Availability: "
+                   FontSize="16"
+                   FontWeight="SemiBold"/>
+            <TextBlock Text="{Binding Availability}"
+                   FontSize="16"
+                   FontWeight="Bold"/>
+        </StackPanel>
+
+        <!-- Issues Grid -->
+        <DataGrid Grid.Row="2"
+              ItemsSource="{Binding Issues}"
+              AutoGenerateColumns="False"
+              IsReadOnly="True"
+              MouseDoubleClick="Issue_DoubleClick">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
@@ -20,4 +48,5 @@
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
+
 </Window>

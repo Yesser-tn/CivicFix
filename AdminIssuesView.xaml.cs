@@ -20,9 +20,11 @@ namespace CivicFix.UI
             {
                 var view = new UpdateIssueStatusView(issue.Id);
                 view.ShowDialog();
-
-                // Reload list
-                DataContext = new AdminIssuesViewModel();
+                var assignView = new AssignAgentView(issue.Id);
+                if (assignView.ShowDialog() == true)
+                {
+                    DataContext = new AdminIssuesViewModel();
+                }
             }
         }
     }

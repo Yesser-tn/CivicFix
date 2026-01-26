@@ -29,7 +29,9 @@
             <Button Content="Agent Availability"
                     Height="40"
                     Click="AgentAvailability_Click"/>
-
+            <Button Content="Manage Categories"
+                    Height="40"
+                    Click="ManageCategories_Click"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -1,29 +1,30 @@
-﻿using CivicFix.Core.Entities;
-using System.Windows;
+﻿    using CivicFix.Core.Entities;
+    using System.Windows;
 
-namespace CivicFix.UI
-{
-    public partial class CitizenDashboard : Window
+    namespace CivicFix.UI
     {
-        private readonly User _currentUser;
-
-        // 👇 Receive user in constructor
-        public CitizenDashboard(User user)
+        public partial class CitizenDashboard : Window
         {
-            InitializeComponent();
-            _currentUser = user;
-        }
+            private readonly User _currentUser;
+
+            // 👇 Receive user in constructor
+            public CitizenDashboard(User user)
+            {
+                InitializeComponent();
+                _currentUser = user;
+            }
 
         private void ReportIssue_Click(object sender, RoutedEventArgs e)
         {
-            var issueView = new CreateIssueView(_currentUser.Id);
-            issueView.ShowDialog();
-        }
-        private void MyIssues_Click(object sender, RoutedEventArgs e)
-        {
-            var view = new CitizenIssuesView(_currentUser.Id);
+            var view = new CreateIssueView(_currentUser.Id);
             view.ShowDialog();
         }
 
+        private void MyIssues_Click(object sender, RoutedEventArgs e)
+            {
+                var view = new CitizenIssuesView(_currentUser.Id);
+                view.ShowDialog();
+            }
+
+        }
     }
-}

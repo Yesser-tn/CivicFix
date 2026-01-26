@@ -8,6 +8,11 @@ namespace CivicFix.UI
         public AdminAgentAvailabilityView()
         {
             InitializeComponent();
+            Load();
+        }
+
+        private void Load()
+        {
             DataContext = new AdminAgentAvailabilityViewModel();
         }
     }

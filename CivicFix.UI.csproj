@@ -69,6 +69,9 @@
     <Compile Include="AdminAgentAvailabilityView.xaml.cs">
       <DependentUpon>AdminAgentAvailabilityView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AdminCategoriesView.xaml.cs">
+      <DependentUpon>AdminCategoriesView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdminCitizenIssuesView.xaml.cs">
       <DependentUpon>AdminCitizenIssuesView.xaml</DependentUpon>
     </Compile>
@@ -77,6 +80,9 @@
     </Compile>
     <Compile Include="AgentIssuesView.xaml.cs">
       <DependentUpon>AgentIssuesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AssignAgentView.xaml.cs">
+      <DependentUpon>AssignAgentView.xaml</DependentUpon>
     </Compile>
     <Compile Include="AuditLogsView.xaml.cs">
       <DependentUpon>AuditLogsView.xaml</DependentUpon>
@@ -103,6 +109,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AdminCategoriesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AdminCitizenIssuesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,6 +130,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AgentIssuesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AssignAgentView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

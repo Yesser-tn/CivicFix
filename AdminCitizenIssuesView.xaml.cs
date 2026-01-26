@@ -9,6 +9,7 @@ namespace CivicFix.UI
         {
             InitializeComponent();
             DataContext = new AdminCitizenIssuesViewModel();
+
         }
     }
 }

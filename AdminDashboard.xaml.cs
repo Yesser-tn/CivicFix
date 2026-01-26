@@ -39,6 +39,10 @@ namespace CivicFix.UI
             var view = new AdminAgentAvailabilityView();
             view.ShowDialog();
         }
+        private void ManageCategories_Click(object sender, RoutedEventArgs e)
+        {
+            new AdminCategoriesView().ShowDialog();
+        }
 
 
     }

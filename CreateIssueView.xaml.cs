@@ -11,27 +11,24 @@ namespace CivicFix.UI
         {
             InitializeComponent();
 
-            _viewModel = new CreateIssueViewModel
-            {
-                UserId = userId
-            };
-
+            _viewModel = new CreateIssueViewModel(userId);
             DataContext = _viewModel;
         }
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            if (_viewModel.Create())
+            // 🛑 BASIC VALIDATION (important)
+            if (string.IsNullOrWhiteSpace(_viewModel.Title) ||
+                _viewModel.SelectedCategoryId == 0)
             {
-                MessageBox.Show("Issue reported successfully.");
-                this.Close();
+                MessageBox.Show("Please fill all fields.");
+                return;
             }
-        }
 
-        private void ComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-        {
+            _viewModel.Create();
 
+            MessageBox.Show("Issue reported successfully ✅");
+            this.Close();
         }
     }
 }
-        

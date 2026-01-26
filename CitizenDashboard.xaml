@@ -11,9 +11,8 @@
                     VerticalAlignment="Center"
                     Width="260">
 
-            <Button Content="Report an Issue"
-                    Height="45"
-                    Margin="0,0,0,15"
+            <Button Content="Report Issue"
+                    Height="35"
                     Click="ReportIssue_Click"/>
 
             <Button Content="My Issues"
