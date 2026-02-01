@@ -31,3 +31,16 @@ git clone https://github.com/Yesser-tn/CivicFix
 3. Build the solution
 4. Run the project
 
+## 📸 Screenshots
+
+### Login
+![Login Screen](screenshots/login.png)
+
+### Admin Dashboard
+![Admin Dashboard](screenshots/admin-dashboard.png)
+
+### Categories Management
+![Admin Categories](screenshots/AdminCategoriesView.png)
+
+### Create Issue
+![Create Issue](screenshots/create-issue.png)
