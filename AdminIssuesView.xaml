@@ -33,7 +33,6 @@
                                Foreground="#E5E7EB"/>
                 </StackPanel>
 
-                <!-- DATA GRID (DENSE) -->
                 <DataGrid Grid.Row="1"
                           ItemsSource="{Binding Issues}"
                           AutoGenerateColumns="False"
@@ -52,7 +51,6 @@
                           SelectionMode="Single"
                           SelectionUnit="FullRow">
 
-                    <!-- COLUMN HEADERS -->
                     <DataGrid.ColumnHeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="#020617"/>
@@ -63,7 +61,6 @@
                         </Style>
                     </DataGrid.ColumnHeaderStyle>
 
-                    <!-- ROW STYLE -->
                     <DataGrid.RowStyle>
                         <Style TargetType="DataGridRow">
                             <Setter Property="Cursor" Value="Hand"/>
@@ -79,7 +76,6 @@
                         </Style>
                     </DataGrid.RowStyle>
 
-                    <!-- CELL STYLE -->
                     <DataGrid.CellStyle>
                         <Style TargetType="DataGridCell">
                             <Setter Property="Padding" Value="10,3"/>
@@ -89,17 +85,14 @@
 
                     <DataGrid.Columns>
 
-                        <!-- TITLE -->
                         <DataGridTextColumn Header="TITLE"
                                             Binding="{Binding Title}"
                                             Width="*" />
 
-                        <!-- CATEGORY -->
                         <DataGridTextColumn Header="CATEGORY"
                                             Binding="{Binding Category}"
                                             Width="140" />
 
-                        <!-- STATUS (COMPACT BADGE) -->
                         <DataGridTemplateColumn Header="STATUS"
                                                 Width="120">
                             <DataGridTemplateColumn.CellTemplate>
@@ -134,12 +127,10 @@
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
-                        <!-- CREATED AT -->
                         <DataGridTextColumn Header="CREATED"
                                             Binding="{Binding CreatedAt}"
                                             Width="160" />
 
-                        <!-- LOCATION -->
                         <DataGridTextColumn Header="LOCATION"
                                             Binding="{Binding Location}"
                                             Width="140" />

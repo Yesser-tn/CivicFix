@@ -7,12 +7,9 @@
         WindowStartupLocation="CenterScreen"
         Background="#0F172A">
 
-    <!-- ===================== -->
-    <!-- RESOURCES -->
-    <!-- ===================== -->
+ 
     <Window.Resources>
 
-        <!-- Secondary Dashboard Button Style -->
         <Style x:Key="DashboardButtonStyle" TargetType="Button">
             <Setter Property="Height" Value="44"/>
             <Setter Property="Foreground" Value="#E5E7EB"/>
@@ -35,21 +32,18 @@
 
                         <ControlTemplate.Triggers>
 
-                            <!-- Hover -->
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="border"
                                         Property="BorderBrush"
                                         Value="#60A5FA"/>
                             </Trigger>
 
-                            <!-- Pressed -->
                             <Trigger Property="IsPressed" Value="True">
                                 <Setter TargetName="border"
                                         Property="Background"
                                         Value="#1E293B"/>
                             </Trigger>
 
-                            <!-- Disabled -->
                             <Trigger Property="IsEnabled" Value="False">
                                 <Setter TargetName="border"
                                         Property="Opacity"
@@ -64,9 +58,7 @@
 
     </Window.Resources>
 
-    <!-- ===================== -->
-    <!-- LAYOUT -->
-    <!-- ===================== -->
+
     <Grid>
         <Border Background="#020617"
                 CornerRadius="18"
@@ -79,7 +71,6 @@
 
             <StackPanel>
 
-                <!-- TITLE -->
                 <TextBlock Text="Admin Dashboard"
                            FontSize="22"
                            FontWeight="SemiBold"
@@ -87,7 +78,6 @@
                            HorizontalAlignment="Center"
                            Margin="0,0,0,26"/>
 
-                <!-- VALIDATE ISSUES (Primary) -->
                 <Button Height="44"
                         Margin="0,0,0,14"
                         Background="#2563EB"
@@ -106,7 +96,6 @@
                     </StackPanel>
                 </Button>
 
-                <!-- AUDIT LOGS -->
                 <Button Style="{StaticResource DashboardButtonStyle}"
                         Margin="0,0,0,14"
                         Click="ViewLogs_Click">
@@ -120,7 +109,6 @@
                     </StackPanel>
                 </Button>
 
-                <!-- CITIZEN ACTIVITY -->
                 <Button Style="{StaticResource DashboardButtonStyle}"
                         Margin="0,0,0,14"
                         Click="CitizenActivity_Click">
@@ -134,7 +122,6 @@
                     </StackPanel>
                 </Button>
 
-                <!-- AGENT AVAILABILITY -->
                 <Button Style="{StaticResource DashboardButtonStyle}"
                         Margin="0,0,0,14"
                         Click="AgentAvailability_Click">
@@ -148,7 +135,6 @@
                     </StackPanel>
                 </Button>
 
-                <!-- MANAGE CATEGORIES (Success) -->
                 <Button Height="44"
                         Background="#16A34A"
                         Foreground="White"

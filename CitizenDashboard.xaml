@@ -19,7 +19,7 @@
 
             <StackPanel>
 
-                <!-- HEADER -->
+  
                 <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center"
                             Margin="0,0,0,26">
@@ -34,7 +34,7 @@
                                Foreground="#E5E7EB"/>
                 </StackPanel>
 
-                <!-- REPORT ISSUE (PRIMARY) -->
+              
                 <Button Height="46"
                         Margin="0,0,0,16"
                         Background="#2563EB"
@@ -54,7 +54,6 @@
                     </StackPanel>
                 </Button>
 
-                <!-- MY ISSUES -->
                 <Button Height="46"
                         Background="#020617"
                         BorderBrush="#334155"

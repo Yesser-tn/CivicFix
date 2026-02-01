@@ -20,7 +20,6 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <!-- HEADER (COMPACT) -->
                 <StackPanel Orientation="Horizontal" Margin="2,0,0,12">
                     <TextBlock FontFamily="Segoe Fluent Icons"
                                Text="&#xE716;"
@@ -33,7 +32,6 @@
                                Foreground="#E5E7EB"/>
                 </StackPanel>
 
-                <!-- DATA GRID (DENSE) -->
                 <DataGrid Grid.Row="1"
                           ItemsSource="{Binding Citizens}"
                           AutoGenerateColumns="False"
@@ -51,7 +49,6 @@
                           SelectionMode="Single"
                           SelectionUnit="FullRow">
 
-                    <!-- COLUMN HEADERS -->
                     <DataGrid.ColumnHeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="#020617"/>
@@ -62,7 +59,6 @@
                         </Style>
                     </DataGrid.ColumnHeaderStyle>
 
-                    <!-- ROW STYLE -->
                     <DataGrid.RowStyle>
                         <Style TargetType="DataGridRow">
                             <Setter Property="Cursor" Value="Hand"/>
@@ -78,7 +74,6 @@
                         </Style>
                     </DataGrid.RowStyle>
 
-                    <!-- CELL STYLE (COMPACT) -->
                     <DataGrid.CellStyle>
                         <Style TargetType="DataGridCell">
                             <Setter Property="Padding" Value="10,3"/>
@@ -88,17 +83,14 @@
 
                     <DataGrid.Columns>
 
-                        <!-- CITIZEN -->
                         <DataGridTextColumn Header="CITIZEN"
                                             Binding="{Binding FullName}"
                                             Width="*" />
 
-                        <!-- EMAIL -->
                         <DataGridTextColumn Header="EMAIL"
                                             Binding="{Binding Email}"
                                             Width="240" />
 
-                        <!-- ISSUES -->
                         <DataGridTextColumn Header="ISSUES"
                                             Binding="{Binding IssueCount}"
                                             Width="120" />

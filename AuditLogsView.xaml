@@ -20,7 +20,6 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <!-- HEADER (COMPACT) -->
                 <StackPanel Orientation="Horizontal" Margin="2,0,0,12">
                     <TextBlock FontFamily="Segoe Fluent Icons"
                                Text="&#xE9D9;"
@@ -33,7 +32,7 @@
                                Foreground="#E5E7EB"/>
                 </StackPanel>
 
-                <!-- LOGS GRID (DENSE) -->
+      
                 <DataGrid Grid.Row="1"
                           ItemsSource="{Binding Logs}"
                           AutoGenerateColumns="False"
@@ -51,7 +50,7 @@
                           SelectionMode="Single"
                           SelectionUnit="FullRow">
 
-                    <!-- COLUMN HEADERS -->
+           
                     <DataGrid.ColumnHeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="#020617"/>
@@ -62,7 +61,7 @@
                         </Style>
                     </DataGrid.ColumnHeaderStyle>
 
-                    <!-- ROW STYLE -->
+               
                     <DataGrid.RowStyle>
                         <Style TargetType="DataGridRow">
                             <Setter Property="BorderThickness" Value="0"/>
@@ -78,7 +77,7 @@
                         </Style>
                     </DataGrid.RowStyle>
 
-                    <!-- CELL STYLE -->
+           
                     <DataGrid.CellStyle>
                         <Style TargetType="DataGridCell">
                             <Setter Property="Padding" Value="10,3"/>
@@ -88,17 +87,16 @@
 
                     <DataGrid.Columns>
 
-                        <!-- ACTION -->
                         <DataGridTextColumn Header="ACTION"
                                             Binding="{Binding Action}"
                                             Width="180"/>
 
-                        <!-- DESCRIPTION -->
+                      
                         <DataGridTextColumn Header="DESCRIPTION"
                                             Binding="{Binding Description}"
                                             Width="*" />
 
-                        <!-- DATE -->
+              
                         <DataGridTextColumn Header="DATE"
                                             Binding="{Binding CreatedAt}"
                                             Width="160"/>

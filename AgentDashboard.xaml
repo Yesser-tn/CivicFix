@@ -20,14 +20,12 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <!-- HEADER / STATS (COMPACT) -->
                 <Grid Margin="2,0,0,12">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
 
-                    <!-- LEFT -->
                     <StackPanel Orientation="Horizontal">
                         <TextBlock FontFamily="Segoe Fluent Icons"
                                    Text="&#xE77B;"
@@ -41,12 +39,10 @@
                                    Foreground="#E5E7EB"/>
                     </StackPanel>
 
-                    <!-- RIGHT -->
                     <StackPanel Grid.Column="1"
                                 Orientation="Horizontal"
                                 VerticalAlignment="Center">
 
-                        <!-- Active Issues (SLIM) -->
                         <Border Background="#1E293B"
                                 CornerRadius="10"
                                 Padding="8,2"
@@ -61,7 +57,6 @@
                             </StackPanel>
                         </Border>
 
-                        <!-- Availability (SLIM BADGE) -->
                         <Border CornerRadius="10"
                                 Padding="8,2"
                                 MinWidth="80">
@@ -91,7 +86,6 @@
                     </StackPanel>
                 </Grid>
 
-                <!-- ISSUES GRID (DENSE) -->
                 <DataGrid Grid.Row="1"
                           ItemsSource="{Binding Issues}"
                           AutoGenerateColumns="False"
@@ -110,7 +104,6 @@
                           SelectionMode="Single"
                           SelectionUnit="FullRow">
 
-                    <!-- HEADERS -->
                     <DataGrid.ColumnHeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="#020617"/>
@@ -121,7 +114,6 @@
                         </Style>
                     </DataGrid.ColumnHeaderStyle>
 
-                    <!-- ROW -->
                     <DataGrid.RowStyle>
                         <Style TargetType="DataGridRow">
                             <Setter Property="Cursor" Value="Hand"/>
@@ -137,7 +129,6 @@
                         </Style>
                     </DataGrid.RowStyle>
 
-                    <!-- CELL -->
                     <DataGrid.CellStyle>
                         <Style TargetType="DataGridCell">
                             <Setter Property="Padding" Value="10,3"/>
@@ -147,17 +138,16 @@
 
                     <DataGrid.Columns>
 
-                        <!-- TITLE -->
+                        
                         <DataGridTextColumn Header="TITLE"
                                             Binding="{Binding Title}"
                                             Width="*" />
 
-                        <!-- CATEGORY -->
+                        
                         <DataGridTextColumn Header="CATEGORY"
                                             Binding="{Binding Category}"
                                             Width="130" />
 
-                        <!-- STATUS (COMPACT BADGE) -->
                         <DataGridTemplateColumn Header="STATUS"
                                                 Width="120">
                             <DataGridTemplateColumn.CellTemplate>
@@ -192,7 +182,7 @@
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
-                        <!-- DATE -->
+                
                         <DataGridTextColumn Header="DATE"
                                             Binding="{Binding CreatedAt}"
                                             Width="160" />

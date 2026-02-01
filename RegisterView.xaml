@@ -20,7 +20,6 @@
 
             <StackPanel>
 
-                <!-- HEADER -->
                 <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center"
                             Margin="0,0,0,26">
@@ -35,7 +34,6 @@
                                Foreground="#E5E7EB"/>
                 </StackPanel>
 
-                <!-- FULL NAME -->
                 <TextBlock Text="Full Name"
                            FontSize="13"
                            Foreground="#94A3B8"/>
@@ -48,7 +46,6 @@
                          Margin="0,6,0,14"
                          Text="{Binding FullName}" />
 
-                <!-- EMAIL -->
                 <TextBlock Text="Email"
                            FontSize="13"
                            Foreground="#94A3B8"/>
@@ -61,7 +58,6 @@
                          Margin="0,6,0,14"
                          Text="{Binding Email}" />
 
-                <!-- PASSWORD -->
                 <TextBlock Text="Password"
                            FontSize="13"
                            Foreground="#94A3B8"/>
@@ -73,7 +69,6 @@
                              BorderBrush="#334155"
                              Margin="0,6,0,22"/>
 
-                <!-- REGISTER -->
                 <Button Height="42"
                         Background="#2563EB"
                         Foreground="White"

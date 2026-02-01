@@ -20,7 +20,6 @@
 
             <StackPanel>
 
-                <!-- HEADER (COMPACT) -->
                 <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center"
                             Margin="0,0,0,16">
@@ -35,7 +34,6 @@
                                Foreground="#E5E7EB"/>
                 </StackPanel>
 
-                <!-- TITLE -->
                 <TextBlock Text="Title"
                            Foreground="#94A3B8"
                            FontSize="13"/>
@@ -48,7 +46,7 @@
                          BorderBrush="#334155"
                          Margin="0,4,0,12"/>
 
-                <!-- CATEGORY -->
+       
                 <TextBlock Text="Category"
                            Foreground="#94A3B8"
                            FontSize="13"/>
@@ -70,7 +68,7 @@
                         </DataTemplate>
                     </ComboBox.ItemTemplate>
 
-                    <!-- ✅ THIS fixes dropdown items -->
+           
                     <ComboBox.ItemContainerStyle>
                         <Style TargetType="ComboBoxItem">
                             <Setter Property="Background" Value="White"/>
@@ -94,7 +92,6 @@
                 </ComboBox>
 
 
-                <!-- LOCATION -->
                 <TextBlock Text="Location"
                            Foreground="#94A3B8"
                            FontSize="13"/>
@@ -107,7 +104,7 @@
                          BorderBrush="#334155"
                          Margin="0,4,0,12"/>
 
-                <!-- DESCRIPTION -->
+            
                 <TextBlock Text="Description"
                            Foreground="#94A3B8"
                            FontSize="13"/>
@@ -140,7 +137,7 @@
                     </StackPanel>
                 </Button>
 
-                <!-- SUBMIT -->
+       
 
             </StackPanel>
         </Border>
