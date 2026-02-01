@@ -34,7 +34,6 @@
                                Foreground="#E5E7EB"/>
                 </StackPanel>
 
-                <!-- DATA GRID -->
                 <DataGrid Grid.Row="1"
                           ItemsSource="{Binding Agents}"
                           AutoGenerateColumns="False"
@@ -52,7 +51,6 @@
                           SelectionMode="Single"
                           SelectionUnit="FullRow">
 
-                    <!-- COLUMN HEADERS -->
                     <DataGrid.ColumnHeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="#020617"/>
@@ -63,7 +61,6 @@
                         </Style>
                     </DataGrid.ColumnHeaderStyle>
 
-                    <!-- ROW STYLE -->
                     <DataGrid.RowStyle>
                         <Style TargetType="DataGridRow">
                             <Setter Property="BorderThickness" Value="0"/>
@@ -79,7 +76,6 @@
                         </Style>
                     </DataGrid.RowStyle>
 
-                    <!-- CELL STYLE (COMPACT) -->
                     <DataGrid.CellStyle>
                         <Style TargetType="DataGridCell">
                             <Setter Property="Padding" Value="10,3"/>
@@ -89,17 +85,14 @@
 
                     <DataGrid.Columns>
 
-                        <!-- AGENT -->
                         <DataGridTextColumn Header="AGENT"
                                             Binding="{Binding FullName}"
                                             Width="*"/>
 
-                        <!-- EMAIL -->
                         <DataGridTextColumn Header="EMAIL"
                                             Binding="{Binding Email}"
                                             Width="240"/>
 
-                        <!-- ACTIVE ISSUES -->
                         <DataGridTextColumn Header="ISSUES"
                                             Binding="{Binding ActiveIssues}"
                                             Width="100"/>
