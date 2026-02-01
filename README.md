@@ -34,16 +34,16 @@ git clone https://github.com/Yesser-tn/CivicFix
 ## 📸 Screenshots
 
 ### Login
-![Login Screen](screenshots/login.png)
+![Login Screen](screenshots/login-screen.png)
 
 ### Admin Dashboard
 ![Admin Dashboard](screenshots/admin-dashboard.png)
 
 ### Categories Management
-![Admin Categories](screenshots/AdminCategoriesView.png)
+![Admin Categories](screenshots/admin-category-management.png)
 
 ### Create Issue
-![Create Issue](screenshots/create-issue.png)
+![Create Issue](screenshots/create-issue-form.png)
 
 
 ## 🔮 Future Improvements
