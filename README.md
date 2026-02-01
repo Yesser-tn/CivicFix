@@ -51,3 +51,7 @@ git clone https://github.com/Yesser-tn/CivicFix
 - Role-based authentication improvements
 - Search and filtering for issues
 - Deployment packaging
+
+
+## 👤 Author
+Developed by Yesser — Computer Science student
