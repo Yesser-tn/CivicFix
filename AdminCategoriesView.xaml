@@ -22,7 +22,6 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <!-- HEADER (COMPACT) -->
                 <StackPanel Orientation="Horizontal" Margin="2,0,0,12">
                     <TextBlock FontFamily="Segoe Fluent Icons"
                                Text="&#xE8CB;"
