@@ -35,7 +35,6 @@
                                Foreground="#E5E7EB"/>
                 </StackPanel>
 
-                <!-- ADD CATEGORY (COMPACT) -->
                 <Border Grid.Row="1"
                         Background="#020617"
                         BorderBrush="#1E293B"
@@ -76,7 +75,6 @@
                     </StackPanel>
                 </Border>
 
-                <!-- CATEGORY LIST (DENSE TABLE) -->
                 <DataGrid Grid.Row="2"
                           ItemsSource="{Binding Categories}"
                           AutoGenerateColumns="False"
@@ -92,7 +90,6 @@
                           AlternatingRowBackground="#020617"
                           RowBackground="#020617">
 
-                    <!-- HEADERS -->
                     <DataGrid.ColumnHeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="#020617"/>
@@ -103,7 +100,6 @@
                         </Style>
                     </DataGrid.ColumnHeaderStyle>
 
-                    <!-- ROW -->
                     <DataGrid.RowStyle>
                         <Style TargetType="DataGridRow">
                             <Setter Property="BorderThickness" Value="0"/>
@@ -118,7 +114,6 @@
                         </Style>
                     </DataGrid.RowStyle>
 
-                    <!-- CELL -->
                     <DataGrid.CellStyle>
                         <Style TargetType="DataGridCell">
                             <Setter Property="Padding" Value="10,3"/>
@@ -137,7 +132,6 @@
                     </DataGrid.Columns>
                 </DataGrid>
 
-                <!-- SAVE BUTTON (COMPACT) -->
                 <Button Grid.Row="3"
                         Height="38"
                         Margin="0,14,0,0"
