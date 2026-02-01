@@ -2,23 +2,78 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Citizen Dashboard"
-        Height="450"
-        Width="800"
-        WindowStartupLocation="CenterScreen">
+        Height="460"
+        Width="820"
+        WindowStartupLocation="CenterScreen"
+        Background="#0F172A">
 
     <Grid>
-        <StackPanel HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Width="260">
+        <Border Background="#020617"
+                CornerRadius="18"
+                Padding="26"
+                Width="420"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                BorderBrush="#1E293B"
+                BorderThickness="1">
 
-            <Button Content="Report Issue"
-                    Height="35"
-                    Click="ReportIssue_Click"/>
+            <StackPanel>
 
-            <Button Content="My Issues"
-                    Height="45"
-                    Click="MyIssues_Click"/>
+                <!-- HEADER -->
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="0,0,0,26">
+                    <TextBlock FontFamily="Segoe Fluent Icons"
+                               Text="&#xE77B;"
+                               FontSize="20"
+                               Foreground="#60A5FA"
+                               Margin="0,0,10,0"/>
+                    <TextBlock Text="Citizen Dashboard"
+                               FontSize="22"
+                               FontWeight="SemiBold"
+                               Foreground="#E5E7EB"/>
+                </StackPanel>
 
-        </StackPanel>
+                <!-- REPORT ISSUE (PRIMARY) -->
+                <Button Height="46"
+                        Margin="0,0,0,16"
+                        Background="#2563EB"
+                        Foreground="White"
+                        BorderThickness="0"
+                        FontWeight="SemiBold"
+                        Cursor="Hand"
+                        Click="ReportIssue_Click">
+
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                        <TextBlock FontFamily="Segoe Fluent Icons"
+                                   Text="&#xE8FD;"
+                                   FontSize="16"
+                                   Margin="0,0,10,0"/>
+                        <TextBlock Text="Report Issue"/>
+                    </StackPanel>
+                </Button>
+
+                <!-- MY ISSUES -->
+                <Button Height="46"
+                        Background="#020617"
+                        BorderBrush="#334155"
+                        Foreground="#E5E7EB"
+                        BorderThickness="1"
+                        Cursor="Hand"
+                        Click="MyIssues_Click">
+
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                        <TextBlock FontFamily="Segoe Fluent Icons"
+                                   Text="&#xE8F4;"
+                                   FontSize="16"
+                                   Margin="0,0,10,0"/>
+                        <TextBlock Text="My Issues"/>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

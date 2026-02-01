@@ -2,36 +2,171 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Admin Dashboard"
-        Height="400"
-        Width="600"
-        WindowStartupLocation="CenterScreen">
+        Height="460"
+        Width="640"
+        WindowStartupLocation="CenterScreen"
+        Background="#0F172A">
 
+    <!-- ===================== -->
+    <!-- RESOURCES -->
+    <!-- ===================== -->
+    <Window.Resources>
+
+        <!-- Secondary Dashboard Button Style -->
+        <Style x:Key="DashboardButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="44"/>
+            <Setter Property="Foreground" Value="#E5E7EB"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#334155"/>
+            <Setter Property="Background" Value="#020617"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="10">
+                            <ContentPresenter
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"/>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+
+                            <!-- Hover -->
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border"
+                                        Property="BorderBrush"
+                                        Value="#60A5FA"/>
+                            </Trigger>
+
+                            <!-- Pressed -->
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border"
+                                        Property="Background"
+                                        Value="#1E293B"/>
+                            </Trigger>
+
+                            <!-- Disabled -->
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border"
+                                        Property="Opacity"
+                                        Value="0.5"/>
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+
+    <!-- ===================== -->
+    <!-- LAYOUT -->
+    <!-- ===================== -->
     <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="250">
+        <Border Background="#020617"
+                CornerRadius="18"
+                Padding="26"
+                Width="420"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                BorderBrush="#1E293B"
+                BorderThickness="1">
 
-            <TextBlock Text="Admin Dashboard"
-                       FontSize="22"
-                       FontWeight="Bold"
-                       HorizontalAlignment="Center"
-                       Margin="0,0,0,30"/>
+            <StackPanel>
 
-            <Button Content="Validate Issues"
-                    Height="40"
-                    Margin="0,0,0,15"
-                    Click="ValidateIssues_Click"/>
+                <!-- TITLE -->
+                <TextBlock Text="Admin Dashboard"
+                           FontSize="22"
+                           FontWeight="SemiBold"
+                           Foreground="#E5E7EB"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,26"/>
 
-            <Button Content="View Audit Logs"
-                    Height="40"
-                    Click="ViewLogs_Click"/>
-            <Button Content="Citizen Activity"
-                    Height="40"
-                    Click="CitizenActivity_Click"/>
-            <Button Content="Agent Availability"
-                    Height="40"
-                    Click="AgentAvailability_Click"/>
-            <Button Content="Manage Categories"
-                    Height="40"
-                    Click="ManageCategories_Click"/>
-        </StackPanel>
+                <!-- VALIDATE ISSUES (Primary) -->
+                <Button Height="44"
+                        Margin="0,0,0,14"
+                        Background="#2563EB"
+                        Foreground="White"
+                        BorderThickness="0"
+                        Cursor="Hand"
+                        Click="ValidateIssues_Click">
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock FontFamily="Segoe Fluent Icons"
+                                   Text="&#xE8FD;"
+                                   FontSize="16"
+                                   Margin="0,0,10,0"/>
+                        <TextBlock Text="Validate Issues"
+                                   FontWeight="SemiBold"/>
+                    </StackPanel>
+                </Button>
+
+                <!-- AUDIT LOGS -->
+                <Button Style="{StaticResource DashboardButtonStyle}"
+                        Margin="0,0,0,14"
+                        Click="ViewLogs_Click">
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock FontFamily="Segoe Fluent Icons"
+                                   Text="&#xE9D9;"
+                                   FontSize="16"
+                                   Margin="0,0,10,0"/>
+                        <TextBlock Text="View Audit Logs"/>
+                    </StackPanel>
+                </Button>
+
+                <!-- CITIZEN ACTIVITY -->
+                <Button Style="{StaticResource DashboardButtonStyle}"
+                        Margin="0,0,0,14"
+                        Click="CitizenActivity_Click">
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock FontFamily="Segoe Fluent Icons"
+                                   Text="&#xE716;"
+                                   FontSize="16"
+                                   Margin="0,0,10,0"/>
+                        <TextBlock Text="Citizen Activity"/>
+                    </StackPanel>
+                </Button>
+
+                <!-- AGENT AVAILABILITY -->
+                <Button Style="{StaticResource DashboardButtonStyle}"
+                        Margin="0,0,0,14"
+                        Click="AgentAvailability_Click">
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock FontFamily="Segoe Fluent Icons"
+                                   Text="&#xE77B;"
+                                   FontSize="16"
+                                   Margin="0,0,10,0"/>
+                        <TextBlock Text="Agent Availability"/>
+                    </StackPanel>
+                </Button>
+
+                <!-- MANAGE CATEGORIES (Success) -->
+                <Button Height="44"
+                        Background="#16A34A"
+                        Foreground="White"
+                        BorderThickness="0"
+                        FontWeight="SemiBold"
+                        Cursor="Hand"
+                        Click="ManageCategories_Click">
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock FontFamily="Segoe Fluent Icons"
+                                   Text="&#xE8CB;"
+                                   FontSize="16"
+                                   Margin="0,0,10,0"/>
+                        <TextBlock Text="Manage Categories"/>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

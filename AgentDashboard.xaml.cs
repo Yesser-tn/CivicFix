@@ -12,19 +12,20 @@ namespace CivicFix.UI
         public AgentDashboard(int agentId)
         {
             InitializeComponent();
-            DataContext = new AgentIssuesViewModel(agentId);
+            _agentId = agentId; // ✅ FIX 1
+            DataContext = new AgentIssuesViewModel(_agentId);
         }
-
 
         private void Issue_DoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if (sender is DataGrid grid && grid.SelectedItem is IssueRow issue)
+            if (sender is DataGrid grid && grid.SelectedItem is AgentIssueRow issue)
             {
-                var view = new UpdateIssueStatusView(issue.Id);
-                view.ShowDialog();
+                var detailsView = new IssueDetailsView(issue.Id, canUpdateStatus: true);
+                detailsView.ShowDialog();
 
                 DataContext = new AgentIssuesViewModel(_agentId);
             }
         }
+
     }
 }

@@ -17,11 +17,23 @@ namespace CivicFix.UI
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            // 🛑 BASIC VALIDATION (important)
-            if (string.IsNullOrWhiteSpace(_viewModel.Title) ||
-                _viewModel.SelectedCategoryId == 0)
+            // Location validation
+            if (string.IsNullOrWhiteSpace(_viewModel.Location))
             {
-                MessageBox.Show("Please fill all fields.");
+                MessageBox.Show("Please enter a location.");
+                return;
+            }
+
+            // Optional extra validation (recommended)
+            if (string.IsNullOrWhiteSpace(_viewModel.Title))
+            {
+                MessageBox.Show("Please enter a title.");
+                return;
+            }
+
+            if (_viewModel.SelectedCategoryId == 0)
+            {
+                MessageBox.Show("Please select a category.");
                 return;
             }
 
@@ -30,5 +42,6 @@ namespace CivicFix.UI
             MessageBox.Show("Issue reported successfully ✅");
             this.Close();
         }
+
     }
 }

@@ -90,6 +90,7 @@
     <Compile Include="CitizenIssuesView.xaml.cs">
       <DependentUpon>CitizenIssuesView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="CreateIssueView.xaml.cs">
       <DependentUpon>CreateIssueView.xaml</DependentUpon>
     </Compile>
