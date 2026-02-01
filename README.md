@@ -44,3 +44,10 @@ git clone https://github.com/Yesser-tn/CivicFix
 
 ### Create Issue
 ![Create Issue](screenshots/create-issue.png)
+
+
+## 🔮 Future Improvements
+- Data persistence (database integration)
+- Role-based authentication improvements
+- Search and filtering for issues
+- Deployment packaging
